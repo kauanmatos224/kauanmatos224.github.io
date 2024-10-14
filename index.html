@@ -124,6 +124,46 @@
     ├── requirements.txt        # Lista de dependências necessárias para o projeto
     └── README.md               # Introdução e visão geral do projeto
         </pre>
+    <p>
+    Descrição dos Diretórios e Arquivos
+/data
+Este diretório contém dados brutos e processados, bem como datasets usados para treinamento e validação. Inclui um README com instruções de preparação de dados para facilitar o uso.
+
+/models
+Organiza o código para diferentes modelos de NLP (ex.: BERT, GPT), facilitando a adição de novos modelos e a manutenção de configurações específicas.
+
+/training & /evaluation
+Scripts dedicados para treinamento e avaliação de modelos, com arquivos de configuração centralizados para ajustes rápidos e fáceis.
+
+/tokenization
+Implementações de tokenizadores, centralizando a lógica de pré-processamento e funções auxiliares para lidar com texto.
+
+/pipelines
+Fluxos prontos para tarefas comuns de NLP (ex.: análise de sentimentos, classificação de texto), que facilitam o uso direto e aplicação dos modelos.
+
+/utils
+Funções utilitárias que ajudam na gestão do projeto, como carregamento de dados, manipulação de arquivos e configuração.
+
+/config
+Armazena configurações centralizadas para modelos e pipelines, permitindo que os parâmetros sejam ajustados sem modificar diretamente o código.
+
+/tests
+Testes para verificar o funcionamento correto de cada parte do projeto, incluindo testes unitários e de integração.
+
+/examples
+Scripts de exemplo para ajudar novos usuários a entender e usar o projeto, cobrindo casos de treino, avaliação e uso de pipelines.
+
+/docs
+Documentação abrangente para o projeto, incluindo tutoriais, guias e referências de API para facilitar a compreensão e uso.
+
+setup.py & requirements.txt
+Scripts para instalação e gestão de dependências do projeto, facilitando a configuração do ambiente e a distribuição como um pacote Python.
+
+Como Contribuir
+Clone o repositório: git clone https://github.com/username/my_nlp_project.git
+Instale as dependências: pip install -r requirements.txt
+Leia o README.md e a documentação em /docs para começar a usar.
+    </p>
     </section>
 
     <script>
