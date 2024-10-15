@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,85 +7,92 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f6f9;
+            background-color: #f4f7fa;
             color: #333;
             padding: 20px;
-            line-height: 1.8;
+            line-height: 1.7;
+            font-size: 16px;
         }
 
         header {
             text-align: center;
             padding: 20px;
-            background-color: #1f2937;
-            color: #fff;
+            background-color: #0366d6;
+            color: white;
             border-radius: 8px;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 2.5em;
             margin: 0;
-            font-weight: bold;
+            font-size: 2.5em;
+            letter-spacing: 1px;
         }
 
         h2 {
-            color: #374151;
-            font-size: 1.75em;
-            margin-bottom: 0.5em;
-        }
-
-        p {
-            font-size: 1.1em;
-            color: #555;
+            color: #0366d6;
+            font-size: 1.8em;
+            margin-top: 20px;
         }
 
         .content {
             background: white;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         pre {
-            background-color: #f1f5f9;
+            background-color: #f1f8ff;
             padding: 20px;
-            border-radius: 5px;
-            font-family: "Courier New", Courier, monospace;
-            color: #374151;
             overflow-x: auto;
-            font-size: 1em;
+            border: 1px solid #d1d5da;
+            border-radius: 8px;
+            font-family: "Courier New", Courier, monospace;
+            color: #333;
+            font-size: 15px;
         }
 
-        code {
-            background-color: #f1f5f9;
-            padding: 3px 6px;
-            border-radius: 4px;
-            font-size: 1em;
-            color: #e11d48;
+        pre code {
+            color: #032f62;
         }
 
-        .directory-description {
+        p {
+            margin-top: 10px;
             margin-bottom: 20px;
         }
 
-        /* Button Styling */
-        .btn-contribute {
-            background-color: #3b82f6;
+        /* Custom button styling */
+        .cta-button {
+            display: inline-block;
+            background-color: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
+            font-size: 16px;
             border-radius: 5px;
             text-decoration: none;
-            display: inline-block;
-            font-size: 1.2em;
-            margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
 
-        .btn-contribute:hover {
-            background-color: #2563eb;
+        .cta-button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer style */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #6a737d;
+        }
+
+        footer a {
+            color: #0366d6;
+            text-decoration: none;
         }
     </style>
 </head>
-
 <body>
     <header>
         <h1>my_nlp_project</h1>
@@ -99,6 +105,7 @@
 
         <h2>Estrutura do Repositório</h2>
         <pre>
+<code>
 /my_nlp_project
     ├── /data                   # Diretório para armazenamento e manipulação de dados
     │       ├── /raw                # Dados brutos (sem processamento)
@@ -166,78 +173,23 @@
     ├── setup.py                # Script para instalação do projeto como um pacote
     ├── requirements.txt        # Lista de dependências necessárias para o projeto
     └── README.md               # Introdução e visão geral do projeto
+</code>
         </pre>
-    <p></p>
 
-        <h1>Descrição dos Diretórios e Arquivos</h1>
-
-        <div class="directory-description">
-            <h2>/data</h2>
-            <p>Este diretório contém dados brutos e processados, bem como datasets usados para treinamento e validação. Inclui um README com instruções de preparação de dados para facilitar o uso.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>/models</h2>
-            <p>Organiza o código para diferentes modelos de NLP (ex.: BERT, GPT), facilitando a adição de novos modelos e a manutenção de configurações específicas.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>/training &amp; /evaluation</h2>
-            <p>Scripts dedicados para treinamento e avaliação de modelos, com arquivos de configuração centralizados para ajustes rápidos e fáceis.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>/tokenization</h2>
-            <p>Implementações de tokenizadores, centralizando a lógica de pré-processamento e funções auxiliares para lidar com texto.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>/pipelines</h2>
-            <p>Fluxos prontos para tarefas comuns de NLP (ex.: análise de sentimentos, classificação de texto), que facilitam o uso direto e aplicação dos modelos.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>/utils</h2>
-            <p>Funções utilitárias que ajudam na gestão do projeto, como carregamento de dados, manipulação de arquivos e configuração.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>/config</h2>
-            <p>Armazena configurações centralizadas para modelos e pipelines, permitindo que os parâmetros sejam ajustados sem modificar diretamente o código.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>/tests</h2>
-            <p>Testes para verificar o funcionamento correto de cada parte do projeto, incluindo testes unitários e de integração.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>/examples</h2>
-            <p>Scripts de exemplo para ajudar novos usuários a entender e usar o projeto, cobrindo casos de treino, avaliação e uso de pipelines.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>/docs</h2>
-            <p>Documentação abrangente para o projeto, incluindo tutoriais, guias e referências de API para facilitar a compreensão e uso.</p>
-        </div>
-
-        <div class="directory-description">
-            <h2>setup.py &amp; requirements.txt</h2>
-            <p>Scripts para instalação e gestão de dependências do projeto, facilitando a configuração do ambiente e a distribuição como um pacote Python.</p>
-        </div>
-
-        <h1>Como Contribuir</h1>
+        <h2>Como Contribuir</h2>
         <p>Clone o repositório: <code>git clone https://github.com/username/my_nlp_project.git</code></p>
         <p>Instale as dependências: <code>pip install -r requirements.txt</code></p>
         <p>Leia o <code>README.md</code> e a documentação em <code>/docs</code> para começar a usar.</p>
 
-        <a href="https://github.com/username/my_nlp_project" class="btn-contribute">Saiba Mais</a>
+        <a href="https://github.com/username/my_nlp_project" class="cta-button">Saiba Mais</a>
     </section>
 
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/username">username</a>. Todos os direitos reservados &copy; 2024</p>
+    </footer>
+
     <script>
-        // Script for future enhancements
         console.log("Welcome to the my_nlp_project repository!");
     </script>
 </body>
-
 </html>
