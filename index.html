@@ -94,6 +94,81 @@
     </header>
 
     <section class="content">
+        <h2>Visão Geral</h2>
+        <p>Este repositório oferece uma estrutura completa para projetos de NLP, com foco em modularidade, organização clara e facilidade de manutenção.</p>
+
+        <h2>Estrutura do Repositório</h2>
+        <pre>
+/my_nlp_project
+    ├── /data                   # Diretório para armazenamento e manipulação de dados
+    │       ├── /raw                # Dados brutos (sem processamento)
+    │       ├── /processed          # Dados pré-processados e prontos para uso
+    │       ├── /datasets           # Datasets de treinamento e validação
+    │       └── README.md           # Instruções sobre como usar e preparar os dados
+    │
+    ├── /models                 # Modelos de machine learning para NLP
+    │       ├── /bert               # Código e configurações específicas para o modelo BERT
+    │       │       ├── bert_model.py   # Implementação do modelo BERT
+    │       │       └── bert_config.json# Configurações específicas do modelo BERT
+    │       ├── /gpt                # Código e configurações específicas para o modelo GPT
+    │       │       ├── gpt_model.py    # Implementação do modelo GPT
+    │       │       └── gpt_config.json # Configurações específicas do modelo GPT
+    │
+    ├── /training               # Scripts para treinamento de modelos
+    │       ├── train.py            # Script principal para treinar um modelo
+    │       └── /configs            # Configurações para diferentes treinos
+    │               └── train_config.yaml
+    │
+    ├── /evaluation             # Scripts para avaliar o desempenho dos modelos
+    │       ├── evaluate.py         # Script principal para avaliar um modelo
+    │       └── /metrics            # Funções e módulos para calcular métricas
+    │               ├── accuracy.py
+    │               └── f1_score.py
+    │
+    ├── /tokenization           # Implementação de tokenizadores
+    │       ├── tokenizer.py        # Classe principal de tokenização
+    │       └── /utils              # Funções utilitárias para tokenização
+    │               └── preprocess_text.py
+    │
+    ├── /pipelines              # Definição de pipelines para diferentes tarefas
+    │       ├── sentiment_analysis.py # Pipeline para análise de sentimentos
+    │       └── text_classification.py# Pipeline para classificação de textos
+    │
+    ├── /utils                  # Funções utilitárias e helpers
+    │       ├── data_loader.py      # Funções para carregar datasets
+    │       ├── file_manager.py     # Funções para manipulação de arquivos e diretórios
+    │       └── config_parser.py    # Função para lidar com arquivos de configuração
+    │
+    ├── /config                 # Arquivos de configuração do projeto
+    │       ├── model_config.json   # Configuração geral dos modelos
+    │       └── pipeline_config.yaml# Configurações para pipelines de NLP
+    │
+    ├── /tests                  # Testes unitários e de integração
+    │       ├── /unit               # Testes para cada módulo individual
+    │       │       ├── test_tokenizer.py
+    │       │       └── test_model.py
+    │       └── /integration        # Testes que envolvem múltiplos módulos
+    │               └── test_pipeline.py
+    │
+    ├── /examples               # Exemplos de uso do projeto para diferentes tarefas
+    │       ├── train_example.py    # Exemplo de script para treinar um modelo específico
+    │       ├── evaluate_example.py # Exemplo de script para avaliar um modelo
+    │       └── usage_example.py    # Exemplos de como usar pipelines e utilitários
+    │
+    ├── /docs                   # Documentação do projeto
+    │       ├── /guides             # Tutoriais e guias de uso
+    │       │       ├── how_to_train.md # Como treinar um modelo NLP usando este projeto
+    │       │       └── how_to_evaluate.md # Como avaliar um modelo NLP usando este projeto
+    │       ├── /api                # Documentação da API
+    │       │       └── model_api.md    # Referência para o uso de classes de modelos
+    │       └── README.md           # Resumo do projeto e instruções iniciais
+    │
+    ├── setup.py                # Script para instalação do projeto como um pacote
+    ├── requirements.txt        # Lista de dependências necessárias para o projeto
+    └── README.md               # Introdução e visão geral do projeto
+        </pre>
+    <p></p>
+
         <h1>Descrição dos Diretórios e Arquivos</h1>
 
         <div class="directory-description">
@@ -166,4 +241,3 @@
 </body>
 
 </html>
-
